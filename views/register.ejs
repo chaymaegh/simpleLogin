@@ -1,0 +1,31 @@
+<%- include('header')-%>
+ 
+
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+<div class="container">
+<h1>Login</h1>
+<% if(locals.logout){ %>
+<p style="text-align:center; margin-top:19px;color: greenyellow;">
+Log out Successfully..!
+</p>
+<% } %>
+<form action="/register" method="POST">
+    <label>Name</label>
+    <input type="text" id="name" name="name" required></input>
+<label>Email</label>
+<input type="email" id="email" name="email" required></input>
+<label>Passowrd</label>
+<input type="password" id="password" name="password"></input>
+      <button type="submit" style="margin-bottom: 40px;margin-top: 40px;">Login</button>
+<a href="/login" >Register</a>
+</form>
+</div>
+
+
+
+
+
+<%- include('footer')-%>
